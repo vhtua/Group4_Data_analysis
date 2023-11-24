@@ -1,6 +1,15 @@
-# Group4_Data_analysis
+# Hierarchical Cluster Analysis: Movie Genres Preferences
 
-This is the repo of group 4
+### Instructor: 
+- Prof. Christina Andersson
+
+### Students: (Group 4)
+- Vũ Hoàng Tuấn Anh (18812) 
+- Trần Kim Hoàn (18810)
+- Bá Nguyễn Quốc Anh (17965) 
+- Nguyễn Hoàng Hải Nam (17035)
+
+---------------------
 
 ## Project Setup
 
