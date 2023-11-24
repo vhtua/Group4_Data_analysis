@@ -14,12 +14,16 @@
 ## Project Setup
 
 ### Dependencies:
-- R base package 4.3.2 or higher
-- cluster 2.1.4 or higher
-- gplots 3.1.3 or higher 
-- ggplot2 3.4.4 or higher
 
-| Package name      | Description               | Version       |
-| -----------       | -----------               | -----         |
-| R base            | The R Base Package        | >= 4.3.2      |
-| Paragraph         | Text                      |               |
+| Package name      | Description                       | Version       |
+| -----------       | -----------                       | -----         |
+| R base            | The R Base Package                | >= 4.3.2      |
+| cluster           | contain function 'daisy'          | >= 2.1.4      |
+| factoextra        | clustering visualization          | >= 1.0.7      |
+| gplots            | plotting data, dendrogram         | >= 3.1.3      |
+| ggplot2           | draw distribution graph           | >= 3.4.4      |
+
+
+--------------------
+
+## Result
