@@ -1,0 +1,115 @@
+﻿Age,Gender,Field,Genre,Frequency,Factor,Platform
+16,Female,Society,Comedy,Less than 2 hours,The image and trailer of the movie,Web browser
+16,Female,Business,Comedy,Less than 2 hours,The quality of the movie,Mobile app
+17,Female,Society,Animation,6 - 10 hours,Ratings of the movie,Television
+17,Male,Business,Romance,Less than 2 hours,The cast and crew of the movie,Mobile app
+18,Female,Society,Action,2 - 5 hours,The quality of the movie,Web browser
+18,Male,Arts/Entertainment,Horror,Less than 2 hours,The cast and crew of the movie,Movie theater
+18,Female,Education,Fantasy,Less than 2 hours,The quality of the movie,Mobile app
+19,Male,Arts/Entertainment,Animation,More than 20 hours,The image and trailer of the movie,Web browser
+19,Male,Information Technology,Documentary/History,Less than 2 hours,The title and description of the movie,Mobile app
+19,Female,Engineering,Romance,2 - 5 hours,The title and description of the movie,Mobile app
+19,Male,Information Technology,Science-fiction,Less than 2 hours,The cast and crew of the movie,Movie theater
+19,Male,Information Technology,Action,More than 20 hours,The image and trailer of the movie,Mobile app
+19,Male,Engineering,Animation,More than 20 hours,The quality of the movie,Web browser
+19,Female,Information Technology,Action,2 - 5 hours,The title and description of the movie,Mobile app
+20,Female,Business,Romance,6 - 10 hours,The cast and crew of the movie,Mobile app
+20,Male,Society,Animation,6 - 10 hours,The quality of the movie,Web browser
+20,Female,Society,Horror,Less than 2 hours,Ratings of the movie,Web browser
+20,Female,Arts/Entertainment,Comedy,Less than 2 hours,The image and trailer of the movie,Mobile app
+20,Other,Healthcare,Comedy,Less than 2 hours,The title and description of the movie,Television
+20,Female,Business,Science-fiction,2 - 5 hours,The image and trailer of the movie,Mobile app
+20,Female,Business,Action,2 - 5 hours,The image and trailer of the movie,Web browser
+20,Female,Education,Animation,6 - 10 hours,The image and trailer of the movie,Mobile app
+20,Male,Engineering,Action,2 - 5 hours,The quality of the movie,Web browser
+20,Female,Healthcare,Animation,16 - 20 hours,Random choice,Web browser
+21,Female,Business,Horror,Less than 2 hours,Random choice,Web browser
+21,Male,Engineering,Animation,2 - 5 hours,The title and description of the movie,Web browser
+21,Male,Engineering,Science-fiction,2 - 5 hours,The quality of the movie,Web browser
+21,Male,Information Technology,Crime,Less than 2 hours,Ratings of the movie,DVDs/Blu-rays
+21,Male,Engineering,Science-fiction,Less than 2 hours,The quality of the movie,Web browser
+21,Female,Business,Comedy,2 - 5 hours,The title and description of the movie,Movie theater
+21,Female,Arts/Entertainment,Comedy,More than 20 hours,The image and trailer of the movie,Mobile app
+21,Female,Education,Horror,6 - 10 hours,The quality of the movie,Mobile app
+21,Male,Engineering,Science-fiction,2 - 5 hours,Random choice,Web browser
+21,Female,Arts/Entertainment,Comedy,Less than 2 hours,The cast and crew of the movie,Movie theater
+21,Female,Society,Comedy,Less than 2 hours,The cast and crew of the movie,Web browser
+21,Male,Information Technology,Action,Less than 2 hours,The image and trailer of the movie,Web browser
+21,Female,Engineering,Horror,11 - 15 hours,The image and trailer of the movie,Mobile app
+21,Female,Arts/Entertainment,Fantasy,2 - 5 hours,Ratings of the movie,Web browser
+21,Male,Arts/Entertainment,Documentary/History,2 - 5 hours,The title and description of the movie,Mobile app
+21,Male,Information Technology,Action,2 - 5 hours,The quality of the movie,Web browser
+21,Male,Information Technology,Science-fiction,6 - 10 hours,The duration of the movie,Mobile app
+21,Other,Information Technology,Animation,More than 20 hours,Random choice,Web browser
+21,Male,Engineering,Animation,2 - 5 hours,The quality of the movie,Mobile app
+21,Female,Information Technology,Science-fiction,2 - 5 hours,The image and trailer of the movie,Mobile app
+21,Female,Engineering,Animation,2 - 5 hours,The image and trailer of the movie,Mobile app
+21,Male,Information Technology,Science-fiction,16 - 20 hours,The quality of the movie,Mobile app
+21,Male,Information Technology,Drama,6 - 10 hours,The image and trailer of the movie,Mobile app
+21,Male,Engineering,Action,Less than 2 hours,The image and trailer of the movie,Web browser
+21,Female,Healthcare,Animation,6 - 10 hours,The image and trailer of the movie,Mobile app
+21,Female,Society,Comedy,2 - 5 hours,The title and description of the movie,Television
+21,Male,Healthcare,Romance,Less than 2 hours,Ratings of the movie,Mobile app
+21,Male,Engineering,Action,Less than 2 hours,The cast and crew of the movie,Movie theater
+21,Male,Education,Action,2 - 5 hours,The quality of the movie,Mobile app
+21,Male,Business,Animation,More than 20 hours,The quality of the movie,Web browser
+21,Male,Arts/Entertainment,Science-fiction,Less than 2 hours,The quality of the movie,Movie theater
+21,Female,Society,Animation,Less than 2 hours,The title and description of the movie,Television
+21,Female,Society,Comedy,2 - 5 hours,The title and description of the movie,Mobile app
+21,Male,Engineering,Comedy,Less than 2 hours,Random choice,Web browser
+21,Male,Engineering,Animation,2 - 5 hours,The title and description of the movie,Web browser
+21,Female,Engineering,Horror,Less than 2 hours,Ratings of the movie,Movie theater
+21,Male,Information Technology,Animation,6 - 10 hours,The quality of the movie,Mobile app
+21,Male,Information Technology,Animation,6 - 10 hours,The quality of the movie,Web browser
+21,Male,Information Technology,Action,Less than 2 hours,The image and trailer of the movie,Movie theater
+21,Female,Business,Romance,2 - 5 hours,The image and trailer of the movie,Mobile app
+21,Male,Engineering,Action,Less than 2 hours,Ratings of the movie,Web browser
+21,Female,Engineering,Romance,2 - 5 hours,The title and description of the movie,Mobile app
+21,Male,Information Technology,Action,6 - 10 hours,Ratings of the movie,Mobile app
+21,Male,Business,Romance,More than 20 hours,The title and description of the movie,Web browser
+21,Male,Engineering,Animation,Less than 2 hours,The image and trailer of the movie,Web browser
+21,Female,Business,Animation,Less than 2 hours,The title and description of the movie,Mobile app
+21,Male,Information Technology,Science-fiction,2 - 5 hours,The title and description of the movie,Mobile app
+21,Male,Arts/Entertainment,Animation,2 - 5 hours,The image and trailer of the movie,Web browser
+21,Male,Education,Science-fiction,Less than 2 hours,The title and description of the movie,Mobile app
+21,Male,Information Technology,Animation,6 - 10 hours,The quality of the movie,Web browser
+21,Male,Business,Fantasy,Less than 2 hours,The quality of the movie,Web browser
+21,Male,Business,Action,Less than 2 hours,The image and trailer of the movie,Movie theater
+21,Male,Business,Animation,6 - 10 hours,The image and trailer of the movie,Mobile app
+21,Female,Business,Animation,Less than 2 hours,The duration of the movie,Mobile app
+22,Male,Engineering,Action,2 - 5 hours,The quality of the movie,Mobile app
+22,Male,Information Technology,Science-fiction,Less than 2 hours,The image and trailer of the movie,Mobile app
+22,Male,Information Technology,Comedy,2 - 5 hours,The quality of the movie,Web browser
+22,Male,Engineering,Documentary/History,2 - 5 hours,The quality of the movie,Web browser
+22,Female,Information Technology,Comedy,More than 20 hours,The image and trailer of the movie,Mobile app
+22,Male,Information Technology,Science-fiction,Less than 2 hours,The title and description of the movie,Mobile app
+22,Male,Information Technology,Action,2 - 5 hours,The quality of the movie,Movie theater
+22,Male,Information Technology,Action,2 - 5 hours,The quality of the movie,Web browser
+23,Female,Information Technology,Comedy,More than 20 hours,The cast and crew of the movie,Mobile app
+23,Female,Business,Action,Less than 2 hours,Ratings of the movie,Mobile app
+23,Female,Real Estate,Drama,2 - 5 hours,The image and trailer of the movie,Mobile app
+23,Male,Information Technology,Science-fiction,2 - 5 hours,The image and trailer of the movie,Web browser
+24,Female,Society,Romance,Less than 2 hours,Ratings of the movie,Mobile app
+24,Male,Real Estate,Drama,2 - 5 hours,The quality of the movie,Web browser
+26,Female,Society,Action,11 - 15 hours,The image and trailer of the movie,Web browser
+27,Female,Real Estate,Romance,2 - 5 hours,The title and description of the movie,Mobile app
+28,Other,Arts/Entertainment,Fantasy,11 - 15 hours,The image and trailer of the movie,Mobile app
+28,Female,Agriculture,Animation,Less than 2 hours,The image and trailer of the movie,Web browser
+31,Female,Business,Romance,11 - 15 hours,The title and description of the movie,Mobile app
+33,Female,Education,Fantasy,2 - 5 hours,The image and trailer of the movie,Mobile app
+33,Female,Society,Romance,11 - 15 hours,The title and description of the movie,Web browser
+35,Female,Business,Crime,Less than 2 hours,The title and description of the movie,Mobile app
+35,Male,Real Estate,Science-fiction,Less than 2 hours,The quality of the movie,Mobile app
+36,Male,Engineering,Science-fiction,16 - 20 hours,The quality of the movie,Web browser
+39,Female,Education,Romance,11 - 15 hours,The quality of the movie,Television
+44,Female,Healthcare,Romance,More than 20 hours,The image and trailer of the movie,Television
+48,Female,Business,Romance,16 - 20 hours,The title and description of the movie,Television
+50,Female,Education,Romance,2 - 5 hours,The cast and crew of the movie,Television
+52,Female,Business,Drama,11 - 15 hours,Random choice,Mobile app
+53,Male,Business,Comedy,2 - 5 hours,The quality of the movie,Mobile app
+53,Female,Healthcare,Comedy,2 - 5 hours,The cast and crew of the movie,Television
+54,Male,Agriculture,Action,6 - 10 hours,The image and trailer of the movie,Mobile app
+54,Female,Education,Romance,11 - 15 hours,The title and description of the movie,Mobile app
+55,Female,Business,Drama,2 - 5 hours,The quality of the movie,Web browser
+56,Male,Government/Non-profit,Action,2 - 5 hours,The cast and crew of the movie,Television
+58,Female,Business,Documentary/History,Less than 2 hours,The quality of the movie,Television

@@ -1,0 +1,12 @@
+﻿Age,Gender,Field,Genre,Frequency,Factor,Platform
+21,Female,Business,Comedy,2 - 5 hours,The title and description of the movie,Movie theater
+21,Female,Arts/Entertainment,Comedy,More than 20 hours,The image and trailer of the movie,Mobile app
+21,Female,Education,Horror,6 - 10 hours,The quality of the movie,Mobile app
+21,Male,Engineering,Science-fiction,2 - 5 hours,Random choice,Web browser
+21,Female,Arts/Entertainment,Comedy,Less than 2 hours,The cast and crew of the movie,Movie theater
+21,Female,Society,Comedy,Less than 2 hours,The cast and crew of the movie,Web browser
+21,Male,Information Technology,Action,Less than 2 hours,The image and trailer of the movie,Web browser
+21,Female,Engineering,Horror,11 - 15 hours,The image and trailer of the movie,Mobile app
+21,Female,Arts/Entertainment,Fantasy,2 - 5 hours,Ratings of the movie,Web browser
+21,Male,Arts/Entertainment,Documentary/History,2 - 5 hours,The title and description of the movie,Mobile app
+21,Male,Information Technology,Action,2 - 5 hours,The quality of the movie,Web browser
