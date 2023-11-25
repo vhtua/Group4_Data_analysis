@@ -10,6 +10,19 @@
 - Nguyễn Hoàng Hải Nam (17035)
 
 ---------------------
+## Project Folder Structure
+
+```
+📁Group4_Data_Analysis
+    ├── 📁data (contains data for analysis)
+    ├── 📁presentation (contains presentation file)
+    ├── 📁report (contains report document)
+    └── 📁survey (contains survey questions)
+
+```
+---------------------
+
+
 ## Programming Languages
  ![R][R.R] 
 
