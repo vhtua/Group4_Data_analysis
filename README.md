@@ -45,7 +45,7 @@
 
 Please find the link to read the report for more information!
 ### Report
-- PDF version: [link](report/pdf/Group4_Hierarchical_Clustering_Analysis.pdf)
+- PDF version: [link](report/pdf/Group4_Hierarchical_Clustering_Analysis_Report.pdf)
 - Latex Source Code: [link](report/latex/)
 
 
