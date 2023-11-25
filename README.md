@@ -31,6 +31,9 @@
 ## Result
 
 Please find the link to read the report for more information!
+### Report
+- PDF version: [link](report/pdf/Group4_Hierarchical_Clustering_Analysis.pdf)
+- Latex Source Code: [link](report/latex/)
 
 
 [R.R]: https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white
