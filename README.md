@@ -17,7 +17,7 @@
     ├── 📁data (contains data for analysis)
     ├── 📁presentation (contains presentation file)
     ├── 📁report (contains report document)
-    └── 📁survey (contains survey questions)
+    └── 📁survey (contains survey questions document)
 
 ```
 ---------------------
