@@ -14,10 +14,10 @@
 
 ```
 📁Group4_Data_Analysis
-    ├── 📁data (contains data for analysis)
-    ├── 📁presentation (contains presentation file)
-    ├── 📁report (contains report document)
-    └── 📁survey (contains survey questions document)
+    ├── 📁data          (contains data for analysis)
+    ├── 📁presentation  (contains presentation file)
+    ├── 📁report        (contains report document)
+    └── 📁survey        (contains survey questions document)
 
 ```
 ---------------------
