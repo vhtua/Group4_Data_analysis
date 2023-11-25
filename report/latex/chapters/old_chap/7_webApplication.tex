@@ -1,0 +1,308 @@
+\section{Web Application}
+
+\subsection{Project Setup}
+
+\subsubsection{Requirement}
+\begin{itemize}
+    \item Docker Engine 
+    \item Any Internet browser application: Google Chrome (recommend), Firefox, Microsoft Edge, Opera, Safari, Brave, Chromium etc...
+\end{itemize}
+
+\subsubsection{Clone the repository}
+Clone the repository using git
+
+\begin{itemize}
+    \item SSH
+          \begin{code}{bash}
+            git clone git@gitlab.com:galvdat/vgu_tinyprojects/pe2023/vgupe2023_team7.git
+          \end{code}
+          
+    \item HTTPS
+          \begin{code}{bash}
+            git clone https://gitlab.com/galvdat/vgu_tinyprojects/pe2023/vgupe2023_team7.git
+          \end{code}
+
+    \item or simply download the .zip file of the project.
+\end{itemize}
+
+\subsubsection{Open the project}
+
+\begin{itemize}
+    \item  First, you have to locate the project by going to the folder location [Your Root Folder Location]/Finalize/
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/webApplication/projectRootFolder.png}
+            \caption{Project Root Folder}
+        \label{fig:projectrootfolder}
+    \end{figure}
+
+
+    \item Make sure that Docker Engine has been already running in your system, then open the current folder in terminal (Terminal could be one of these: Powershell, Bash Shell, CMD Prompt, etc...)
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/webApplication/openTerminal.png}
+            \caption{Open Terminal in the project folder}
+        \label{fig:openTerminal}
+    \end{figure}
+
+
+    \item Before the next step, make sure that there is no application on your systems are using any 1 of the 3 following ports: \textbf{80}, \textbf{3307}, and \textbf{8081} since our project needs to use these 3 ports for:
+
+    \begin{itemize}
+        \item Web interface: port 80
+        \item MySQL Database: port 3307
+        \item phpMyAdmin: port 8081
+    \end{itemize}
+
+    \textbf{For Windows}, to check whether a process is running on a specific port, we use this command on Powershell:
+    \begin{code}{bash}
+        Get-Process -Id (Get-NetTCPConnection -LocalPort <PORT_NUMBER>).OwningProcess
+    \end{code}
+    where <PORT\_NUMBER> is a parameter
+
+    For example, we want to check if there exists a process running on port 3307 in our system:
+    \begin{code}{bash}
+        Get-Process -Id (Get-NetTCPConnection -LocalPort 3307).OwningProcess
+    \end{code}
+
+    Then if there exists a process running on port 3307, we have to stop this process in order to run the project. Use this command:
+    \begin{code}{bash}
+        taskkill /PID <PID> /F
+    \end{code}
+    where <PID> is a parameter, which is the Process ID of the process 
+
+    For example, if we want to stop the process which has the PID 19721, we use this command:
+    \begin{code}{bash}
+        taskkill /PID 19721 /F
+    \end{code}
+
+
+
+    \textbf{For Linux (Debian, Ubuntu)} to check whether a process is running on a specific port, we use this command on Terminal:
+    \begin{code}{bash}
+        sudo lsof -i TCP:<PORT_NUMBER>
+    \end{code}
+    where <PORT\_NUMBER> is a parameter
+
+    Then if we want to stop a process, we have to use this command:
+    \begin{code}{bash}
+        sudo kill -9 <PID>
+    \end{code}
+    where <PID> is a parameter, which is the Process ID of the process
+
+    \item Type this command line on the terminal to run the project containers, the Docker Engine will then automatically download the necessary images for the project:
+    \begin{code}{bash}
+        docker-compose up
+    \end{code}
+    
+    
+\end{itemize}
+
+
+\subsubsection{Configure the database}
+\begin{itemize}
+    \item To access the GUI of the database management system, we need to type the following URL in the address bar of any browser and then press Enter (Here I use Google Chrome): 
+
+    \begin{code}{bash}
+        localhost:8081
+    \end{code}
+    It will look like this:
+    \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.65]{graphics/webApplication/phpMyAdminURL.png}
+            \caption{phpMyAdmin URL}
+        \label{fig:phpmyadminurl}
+    \end{figure}
+
+    Then we log in to the MySQL Database System by using the following information:
+    \begin{code}{bash}
+        Username: root
+        Password: 12345
+    \end{code}
+    It will look like this:
+    \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.55]{graphics/webApplication/phpMyAdminSignIn.png}
+            \caption{phpMyAdmin Login Screen}
+        \label{fig:phpmyadminlogin}
+    \end{figure}
+
+
+    \item Next, find the Database name \textbf{vgubusdb} in the database list on the left sidebar, select it and go to the \textbf{Import} section
+    \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.55]{graphics/webApplication/phpMyAdminImportDb.png}
+            \caption{phpMyAdmin Import Schema}
+        \label{fig:phpmyadminimport1}
+    \end{figure}
+
+
+    \item  In the \textbf{File to import:} diagbox, we select the \textbf{Choose File} and then browse for the \textbf{vgubusdb.sql} SQL schema file (in the folder Finalize/db\_schema). After that, we click \textbf{Import} to start importing database schema for \textbf{vgubusdb} database
+    \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.45]{graphics/webApplication/phpMyAdminImportDb2.png}
+            \caption{phpMyAdmin Import Schema 2}
+        \label{fig:phpmyadminimport2}
+    \end{figure}
+
+
+    \item Now the \textbf{vgubusdb} database has already been imported from the file. If the \textbf{vgubusdb} has the following tables and data, the import process is successful, and the database system is ready for use. 
+    \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/webApplication/vgubusdbSchema.png}
+            \caption{VGU Bus DB Schema}
+        \label{fig:vgubusdbschema}
+    \end{figure}
+    
+    
+\end{itemize}
+
+
+\subsubsection{Log in to the Bus Ticket Booking System}
+To access the main web app, we need to type the following URL in the address bar of any browser and then press Enter (Here I use Google Chrome): 
+    \begin{code}{bash}
+        http://localhost/view/login.php
+    \end{code}
+
+    It will look like this:
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.55]{graphics/webApplication/Login.png}
+            \caption{Login Screen}
+        \label{fig:loginscreen}
+    \end{figure}
+
+    Here are some sample default accounts for you to test:
+
+    \begin{itemize}
+        \item Student 1
+            \begin{code}{bash}
+                User ID: 17965
+                Password: 987654321
+            \end{code}
+
+
+        \item Student 2
+            \begin{code}{bash}
+                User ID: 18810
+                Password: 123456789
+            \end{code}
+
+
+        \item Student 3
+            \begin{code}{bash}
+                User ID: 18812
+                Password: 123456789
+            \end{code}
+
+
+        \item Admin
+            \begin{code}{bash}
+                User ID: admin10
+                Password: 123456789
+            \end{code}
+
+
+        \item Driver
+            \begin{code}{bash}
+                User ID: driver20
+                Password: 123456789
+            \end{code}
+    \end{itemize}
+
+    
+
+\subsection{User Interface}
+\noindent A combination of PHP (PHP: Hypertext Preprocessor), HTML and CSS is used to create the User Interface.
+\begin{itemize}
+    \item Introduction page (landing page): The introduction page gives general information about the bus ticket platform.
+    \item Login page: The students, drivers or admins will log in to the system by filling out this login form.
+    \item Userdashboard page: Students, drivers or admins use this page to access ticket information, book a ticket, view their personal information, and view notifications.
+\end{itemize}
+
+\subsection{Database}
+\subsubsection{Database Management System}
+\noindent This project uses MySQL relational database management system since MysQL has a huge number of advantages:
+
+\begin{itemize}
+    \item MySQL is more secure as it consists of a solid data security layer to protect sensitive data from intruders and passwords in MySQL are encrypted.
+
+    \item MySQL is compatible with most of the operating systems, including Windows, Linux, NetWare, Novell, Solaris and other variations of UNIX.
+
+    \item MySQL is scalable and capable of handling more than 50 million rows. This is enough to handle almost any amount of data. Although the default file size limit is 4GB but it can be increased to 8TB.
+
+    \item MySQL has a unique storage engine architecture which makes it faster, cheaper and more reliable.
+
+    \item MySQL is available for free to download and use from the official site of MySQL.
+\end{itemize}
+
+\subsubsection{Implementing Database}
+\noindent Our team uses PHP languages for the back-end and data is controlled by MySQL DBMS (using relational database technique). Here is a class named DBConnect, it is used to help the web app connect to the MySQL Database.
+
+\begin{code}{bash}
+        class DBConnect {
+            private $host   = '172.17.0.1'; 
+            private $port = 3307;
+            private $dbName = 'vgubusdb';
+            private $user   = 'root';
+            private $pass   = '12345';
+
+            public function connect() {
+                try {
+                    $conn = new PDO('mysql:host=' . $this->host . '; port=' . $this->port . '; dbname=' . $this->dbName, $this->user, $this->pass);
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    
+                    return $conn;
+                } catch (PDOException $e) {
+                    echo 'Database Error: ' . $e->getMessage();
+                }
+            }
+        }
+\end{code}
+
+After a successful connection, the system will then could use SQL statements that affect (insert, update, delete, etc...) the database.
+
+\subsection{Security}
+
+\subsubsection{Password hash}
+\noindent Every user of the system has a password which is always hashed one-way to ensure that the personal information is secure. PHP provides a function which could easily implement that:
+\begin{code}{bash}
+    password_hash($original_password, PASSWORD_DEFAULT);
+\end{code}
+
+\noindent password\_hash() creates a new password hash using a strong one-way hashing algorithm. \\
+
+\noindent PASSWORD\_DEFAULT - Use the bcrypt algorithm (default as of PHP 5.5.0). Note that this constant is designed to change over time as new and stronger algorithms are added to PHP. For that reason, the length of the result from using this identifier can change over time. Therefore, it is recommended to store the result in a database column that can expand beyond 60 characters (255 characters would be a good choice).
+
+\subsubsection{QR Code Encryption \& Decryption}
+\noindent The bus ticket booking system has 2 unique functions to encrypt and decrypt the QR Code.
+\noindent Each student's ticket is a QR code and each is generated from a string by Google QR generator API. To ensure that the string is not being read and easily recognised by anyone who has a bad purpose, we use BF-CBC ciphering to encrypt and decrypt the QR string. \\
+
+Encryption function
+    \begin{code}{bash}
+        function encrypt($message, $encryption_key){
+            $ciphering = "BF-CBC";
+            $options = 0;
+            $encryption_iv = "vgucse20";
+        
+            return openssl_encrypt($message, $ciphering, $encryption_key, $options, $encryption_iv);
+        }
+    \end{code}
+
+
+Decryption function
+    \begin{code}{bash}
+    function decrypt($message, $decryption_key){
+        $ciphering = "BF-CBC";
+        $options = 0;
+        $decryption_iv = "vgucse20";
+    
+        return openssl_decrypt($message, $ciphering, $decryption_key, $options, $decryption_iv);
+    }
+    \end{code}
+
+\noindent It makes sure that the system will generate a secure QR ticket for each student after purchase, and only the driver who has a valid account logs in to this system is able to scan and read the message from the QR ticket.
+

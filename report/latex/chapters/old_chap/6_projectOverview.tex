@@ -1,0 +1,258 @@
+\section{Project Overview}
+
+\subsection{Overall Architecture}
+\noindent One of the common architectural patterns, Model-View-Controller, has become popular for designing web apps. For that reason, this architecture was used to construct the VGU Bus Ticket Booking System project. With this strategy, a user can utilize a controller to access a server or database without hassle. We have learned this architecture pattern in Object-Oriented Programming Java and Software Design class and we want to implement it into our project. The detail of this component is: 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.8]{graphics/architecture/architecture.png}
+        \caption{Project Architecture}
+        \label{fig:projectarchitecture}
+    \end{figure}
+    
+\begin{itemize}
+    \item View:
+        \begin{itemize}
+            \item  Is a part of the application that represents the data.
+            \item Client (bus drivers, students) view include all the UI components such as login-page, dashboard.
+        \end{itemize}
+    \item Controller:
+        \begin{itemize}
+            \item Is a part of the application that process the user interaction.
+            \item The controller will interprets the mouse and keyboard inputs from the user then request the model and view to change as appropriate.
+            \item When the user login to the system, a system send’s commands to the model to update the UI to the dashboard contain information of that user, if the user change anything, the controller will send commands to the model to update that user information in the database.
+        \end{itemize}
+    \item Model:
+        \begin{itemize}
+            \item Is a part of storing data and its related logic.
+            \item When a Controller retrieves the students bus ticket information from the database. The model manipulates data and sends it back to the database or uses it to render bus ticket information information to the students.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Use Case Diagrams}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{graphics/useCaseDiagram/Final_BusTicketBooking_Use-cases.png}
+        \caption{Use Case Diagram}
+        \label{fig:usecasediagram}
+    \end{figure}
+\noindent This is the use case diagram of our application. Three main actors are student, administration and bus drivers with different functions. 
+\begin{itemize}
+    \item Students:
+        \begin{itemize}
+            \item Login: Students fill the login form with a username and password, which are given by the university. 
+            \item View account info: Students can view their personal details.
+            \item Change password: Student can change the password of their accounts by two steps:
+                \begin{itemize}
+                    \item Enter their old password. 
+                    \item After successfully entering the old password, students can enter the new password. When this step is completed, the default password of this account will be changed to the new password. 
+                \end{itemize}
+            \item View tickets: Students can view the ticket information (destination, time).
+            \item View notifications: Students can view notifications about tickets or update information of the system. 
+            \item Book a ticket: Students can book a ticket by two steps and this action will be proceed by Payment System.
+                \begin{itemize}
+                    \item Select a date that the student want to book. 
+                    \item Select a route that the student want to book.
+                \end{itemize}
+        \end{itemize}
+    \item Administrators:
+        \begin{itemize}
+            \item Login: Admins fill the login form with a username and password. 
+            \item View account: Admins can view their personal details. 
+            \item Change ticket price: Admins can change the price of the tickets, which requires three steps:
+                \begin{itemize}
+                    \item Select date: Admins select date that they want to adjust the price. 
+                    \item Select route: Admins select route that they want to adjust the price.
+                    \item Enter new price: when two previous step are completed, admins can enter the new price, when this step is completed, the price of the route and the date will be updated in the database system.
+                \end{itemize}
+            \item Send notification: Admins can send notification to bus drivers and students by three steps:
+                \begin{itemize}
+                    \item Select date: Admins select date that they want to announce the notification. 
+                    \item Enter title: Admins write the title of the notification.
+                    \item Enter content: Admins write the content of the notification, when this step is completed, the notifications will be sent.
+                \end{itemize}
+            \item Add a ticket: Admins can add a new type of ticket by three steps:
+                \begin{itemize}
+                    \item Select date: Admins select a date that they want to add a ticket.
+                    \item Select route:  Admins select route that they want to add a ticket to.
+                    \item Enter price: when two previous steps are completed, admins can enter the price of this ticket, when this step is completed, the information and the price of the new ticket will be uploaded in the database system.
+                \end{itemize}
+        \end{itemize}
+    \item Drivers:
+        \begin{itemize}
+            \item Login: Drivers fill the login form with a username and password, which are given by the university.
+            \item Scan QR ticket: Drivers will scan the OR ticket of the students by using the scanning function of our application in their portable devices.
+            \item View notifications: Drivers can view notifications of the system.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Sequence Diagram}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.05]{graphics/sequenceDiagram/sequenceDiagram_full_v1.png}
+        \caption{Sequence Diagram}
+        \label{fig:sequencediagram}
+    \end{figure}
+\noindent This is the Sequence Diagram of our application and it describes the relation between students, bus drivers, payment service(MOMO), staff(admin), and the bus system.
+\begin{itemize}
+    \item Student: When students login to the website, the bus system will authorize this action. If authorized status fails, the system will inform students and remain at the login page. If the authorized status is successful, students can book a ticket on the user page. When students choose a date and route, the bus system checks the availability of this ticket. If availability status fails, the system will inform the user and turn the page back to the choosing ticket steps. If availability status is successful, the system will require students to make a payment. If the payment process fails, the system informs students and it requires the student to make a payment again. If the payment process is successful, the system will send ticket information to students. 
+    \item Bus driver: When bus drivers login to the website, the bus system will authorize this action. If authorized status fails, the system will inform bus drivers and remain at the login page. If the authorized status is successful, bus drivers can use the scan QR to scan the student ticket. The bus system will check the ticket. If the ticket fails, the bus system will send error notification to the bus drivers. If the ticket is verified, the bus system will send verification notification to bus drivers.
+    \item Staff (Admin):  When staff login to the website, the bus system will authorize this action. If authorized status fails, the system will inform staff and remain at the login page. If the authorized status is successful, staff can access the dashboard system. Staff can change properties such as ticket price while the bus system keeps a record of the action and updates the information.
+\end{itemize}
+
+\subsection{ER Diagrams}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{graphics/ERDiagram/Final_BusTicketBookingER.png}
+        \caption{ER Diagram}
+        \label{fig:erdiagram}
+    \end{figure}
+\noindent This is the Entity Relationship Diagram of our application database. It describes the relationship between admin, driver, student with notification, ticket and booking. 
+\begin{itemize}
+    \item Admin: Admin has attributes: admin\_id (key attribute), name with first name and last name, email and password. Admin has a relationship “NOTIFIES” with Notification and “MANAGES” with Ticket.
+    \item Notification: Notification has attributes: notification\_id (key attribute), date, title, content. Notification has a relationship “NOTIFIES” with Admin.
+    \item Ticket: Ticket has attributes: ticket\_id (key attribute), route, time, and price. Admin has a relationship “CONTAINS” with Booking and “MANAGES” with Admin. 
+    \item Booking: Booking has attributes: student\_id (key attribute), ticket\_id (key attribute), qrcode, bus\_id. Booking has a relationship “HAS” with students, “CONTAINS” with Ticket and “CONTAINS” with Bus.
+    \item Student: Student has attributes: student\_id(key attribute), name with first\_name and last\_name, email, password, intake, phone\_number. Student has a relationship “HAS” with Booking.
+    \item Bus: Bus has attributes: seat\_num, bus\_id (key attribute). Bus has a relationship ”CONTAINS” with Booking.
+\end{itemize}
+
+\subsection{Activity Diagrams}
+    \subsubsection{Student Activity Diagrams}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity1_Student_Login.png}
+            \caption{Activity Diagram - Student Login}
+        \label{fig:activitydiagram1}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.75]{graphics/activityDiagram/Activity2_Student_ViewAccountInfo.png}
+            \caption{Activity Diagram - Student View Account Info}
+        \label{fig:activitydiagram2}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/activityDiagram/Activity3_Student_ChangePassword.png}
+            \caption{Activity Diagram - Student Change Password}
+        \label{fig:activitydiagram3}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.75]{graphics/activityDiagram/Activity4_Student_ViewTickets.png}
+            \caption{Activity Diagram - Student View Ticket}
+        \label{fig:activitydiagram4}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.75]{graphics/activityDiagram/Activity5_Student_ViewNotifications.png}
+            \caption{Activity Diagram - Student View Notifications}
+        \label{fig:activitydiagram5}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.68]{graphics/activityDiagram/Activity6_Student_Bookaticket.png}
+            \caption{Activity Diagram - Student Book A Ticket}
+        \label{fig:activitydiagram6}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.75]{graphics/activityDiagram/Activity7_Student_Logout.png}
+            \caption{Activity Diagram - Student Logout}
+        \label{fig:activitydiagram7}
+        \end{figure}
+    \newpage
+    
+    \subsubsection{Administrator Activity Diagrams}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity8_Admin_Login.png}
+            \caption{Activity Diagram - Administrator Login}
+        \label{fig:activitydiagram8}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity9_Admin_ViewAccountInfo.png}
+            \caption{Activity Diagram - Administrator View Account Info}
+        \label{fig:activitydiagram9}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.4]{graphics/activityDiagram/Activity10_Admin_Changepassword.png}
+            \caption{Activity Diagram - Administrator Change Password}
+        \label{fig:activitydiagram10}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/activityDiagram/Activity11_Admin_ChangeTicketPrice.png}
+            \caption{Activity Diagram - Administrator Change Ticket Price}
+        \label{fig:activitydiagram11}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/activityDiagram/Activity12_Admin_SendNoti.png}
+            \caption{Activity Diagram - Administrator Send Notifications}
+        \label{fig:activitydiagram12}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity13_Admin_AddaTicket.png}
+            \caption{Activity Diagram - Administrator Add Ticket}
+        \label{fig:activitydiagram13}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity14_Admin_ViewBusData.png}
+            \caption{Activity Diagram - Administrator View Bus Data}
+        \label{fig:activitydiagram14}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity15_Admin_ViewTicketData.png}
+            \caption{Activity Diagram - Administrator View Ticket Data}
+        \label{fig:activitydiagram15}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity16_Admin_Logout.png}
+            \caption{Activity Diagram - Administrator Logout}
+        \label{fig:activitydiagram16}
+        \end{figure}
+
+    \subsubsection{Driver Activity Diagrams}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity17_Driver_Login.png}
+            \caption{Activity Diagram - Driver Login}
+        \label{fig:activitydiagram17}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity18_Driver_ViewAccountInfo.png}
+            \caption{Activity Diagram - Driver View Account Info}
+        \label{fig:activitydiagram18}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity19_Driver_ScanQRTicket.png}
+            \caption{Activity Diagram - Driver Scan QR Ticket}
+        \label{fig:activitydiagram19}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity20_Driver_ViewNoti.png}
+            \caption{Activity Diagram - Driver View Notifications}
+        \label{fig:activitydiagram20}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/activityDiagram/Activity21_Driver_ChangePassword.png}
+            \caption{Activity Diagram - Driver Change Password}
+        \label{fig:activitydiagram21}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.6]{graphics/activityDiagram/Activity22_Driver_Logout.png}
+            \caption{Activity Diagram - Driver Logout}
+        \label{fig:activitydiagram22}
+        \end{figure}

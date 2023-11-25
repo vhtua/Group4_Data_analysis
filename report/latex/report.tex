@@ -1,0 +1,130 @@
+\documentclass{tuna-report}
+\usepackage{codespace}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{array}
+
+% Sub-preambles
+% https://github.com/MartinScharrer/standalone
+
+% Side by side tables
+\usepackage{geometry}
+% \usepackage{xcolor}
+
+% Encodings
+\usepackage{gensymb,textcomp}
+
+% Better tables
+% Wide tables go to https://tex.stackexchange.com/q/332902
+\usepackage{multicol,multirow,siunitx,tabularx}
+
+% Better enum
+\usepackage{enumitem}
+
+% Graphics
+\usepackage{caption,float}
+
+% Allow setting >max< width of figure
+% 'export' allows adjustbox keys in \includegraphics
+% For demonstration purposes, remove in production
+\usepackage[export]{adjustbox}
+
+% For demonstration purposes, remove in production
+\usepackage{mwe}
+
+% Configurations
+\newcounter{memberrowno}
+\setcounter{memberrowno}{0}
+\setcounter{tocdepth}{5}
+\reportlayout%
+
+% Override (some) default values
+\ocoursename{Compulsory Elective Subject: Data Analysis in High Dimensions}
+% \ocoursedetails{Data Analysis in High Dimensions}
+\title{Hierarchical Cluster Analysis: Movie Genres Preferences}
+\oadvisor{Prof. Christina Andersson}
+
+% Custom commands
+\newcommand*\mean[1]{\bar{#1}}
+
+\begin{document}
+\coverpage%
+
+\section*{Member list \& Workload}
+\noindent Our team has 4 members and we together decide to split the total workload into proper parts equally. Each member is responsible for the work as below: 
+
+\vspace {2pt}
+\begin{center}
+  \begin{tabular}{>{\stepcounter{memberrowno}\thememberrowno}llcc}
+    \toprule
+    \multicolumn{1}{c}{\textbf{No.}} & \textbf{Full name} & \textbf{ID} & \textbf{Percentage of work} \\
+    \midrule
+    & Vu Hoang Tuan Anh     & 18812     & 100\%                       \\
+    & Tran Kim Hoan         & 18810     & 100\%                       \\
+    & Ba Nguyen Quoc Anh    & 17965     & 100\%                      \\
+    & Nguyen Hoang Hai Nam  & 17035     & 100\%                     \\
+    \bottomrule
+  \end{tabular}
+\end{center} 
+\vspace {2pt}
+
+\begin{itemize}
+    \item \textbf{Vu Hoang Tuan Anh} (ID: 18812)
+        \begin{itemize}
+            \item[-] Collecting and preparing data
+            \item[-] Applying hierarchical cluster model with dummy variables
+            \item[-] Analysising results, plotting dendrogram and histogram, distribution diagram
+            \item[-] Using Gap Statistics method to find the optimal number of clusters
+            \item[-] Writing the report (4. Hierarchical clustering with Dummy variables)
+        \end{itemize}
+        
+    \item \textbf{Tran Kim Hoan} (ID: 18810)
+        \begin{itemize}
+            \item[-] Conducting the survey
+            \item[-] Collecting and preparing data
+            \item[-] Applying hierarchical cluster model with dummy variables
+            \item[-] Analysising results, plotting dendrogram, histogram
+            \item[-] Writing and finalizing the report (3. Data)
+        \end{itemize}
+        
+    \item \textbf{Ba Nguyen Quoc Anh} (ID: 17965)
+        \begin{itemize}
+            \item[-] Collecting data
+            \item[-] Applying hierarchical clustering model with Gower's distance
+            \item[-] Analysising results, plotting dendrogram, histogram
+            \item[-] Writing the report (5. Hierarchical clustering with mixed-type variables + 6. Conclusion)
+        \end{itemize}
+
+    \item \textbf{Nguyen Hoang Hai Nam} (ID: 17035)
+        \begin{itemize}
+            \item[-] Conducting the survey
+            \item[-] Collecting data
+            \item[-] Applying hierarchical cluster model with dummy variables
+            \item[-] Writing the report (1. Project Objective + 2. Overview of Hierarchical clustering methodology)
+        \end{itemize}
+\end{itemize}
+
+
+
+\newpage
+\newpage
+
+\tableofcontents
+
+
+\include{chapters/1.objective.tex}
+\include{chapters/2.hierarchical_overview}
+\include{chapters/3.data}
+\include{chapters/4.hierarchical_dummy.tex}
+\include{chapters/5.hierarchical_mixed}
+\include{chapters/6.conclusion}
+
+% citation - references
+\bibliographystyle{plainurl}
+\bibliographystyle{plain}
+\bibliography{refs.bib}
+\nocite{*}
+
+\end{document}

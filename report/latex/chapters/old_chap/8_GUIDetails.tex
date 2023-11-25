@@ -1,0 +1,316 @@
+\section{GUI Details}
+
+\subsection{Landing page}
+\noindent As first, a landing page is displayed for users to access to the 'VGU Bus Ticket System'.\\
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{graphics/GUI/landingpage/landingpage.png}
+        \caption{Landing page}
+    \label{fig:landingpage}
+    \end{figure}
+\noindent Then, users just need to click the button 'Login' to login to the system. \\
+    
+    
+\subsection{Student as a user}
+    \subsubsection{Login}
+\noindent The login form is displayed so that users can enter their provided accounts to login. In case users forgot their password, just need to click 'Contact Admins'.
+\\ \textbf{Sample account:} 
+\\ User ID: 18810
+\\ Password: 123456789
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/GUI/student/std_login.png}
+            \caption{Login Screen}
+        \label{fig:loginscreen}
+        \end{figure}
+        
+        \subsubsection{Main page}
+            \noindent After 'student as a user' successfully logins, users can see a main page as follow:\\
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{graphics/GUI/student/std_mainpage.png}
+                    \caption{Student - Main page}
+                \label{fig:std_mainpage}
+                \end{figure}
+    
+    
+
+         \subsubsection{Account Information}
+            \noindent Users can check their account information by clicking 'Account' section $\rightarrow$ 'Account information' tab:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{graphics/GUI/student/std_accountinfo.png}
+                    \caption{Student - Account Information}
+                \label{fig:std_accountinfo}
+                \end{figure}
+          \subsubsection{Change password}      
+            \noindent Users can change password in our system by clicking 'Account' section $\rightarrow$ 'Change password' tab:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{graphics/GUI/student/std_changepassword.png}
+                    \caption{Student - Change password}
+                \label{fig:std_changepassword}
+                \end{figure}
+            \noindent As the next stage, users need to follow the rules 'has at least 6 characters', 'has both letters and numbers' to change the password if they want.
+         \subsubsection{My tickets}   
+            \noindent Our system offers a function for users to view all their purchased tickets so that they can arrange their bus schedule. Here is an example figure which the user only purchased 1 ticket before:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{graphics/GUI/student/std_mytickets.png}
+                    \caption{Student - List of my tickets}
+                \label{fig:std_mytickets}
+                \end{figure}
+            \noindent Moreover, users can click the button 'View' in the column 'QR Code' to view QR code of the ticket. The bus driver would scan this QR code to check if users' bus ticket are valid or not.
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{graphics/GUI/student/std_myticket_viewQRcode.png}
+                    \caption{Student - View QR code of a ticket}
+                \label{fig:std_mytickets_QRcode}
+                \end{figure}
+                
+          \subsubsection{Book a ticket}      
+            \noindent The next function is booking a ticket, which is also one of our system's main function. Users can access it by clicking 'Book a ticket' section in the sidebar menu:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{graphics/GUI/student/std_bookaticket.png}
+                    \caption{Student - Book a ticket}
+                \label{fig:std_bookaticket}
+                \end{figure}
+            \noindent Users can select date, route and bus number to check if the bus ticket is available or not:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.45]{graphics/GUI/student/std_bookaticket_select.png}
+                    \caption{Student - Select to book a ticket}
+                \label{fig:std_select_bookaticket}
+                \end{figure}
+                \noindent If there is an alert 'You have already purchased this ticket!' emerged, it means that users already purchased the ticket, users can access 'My ticket' section to check it. If an alert 'The bus you chose has already full of seat!' emerged, users please select another bus for their schedule. If users see another alert like 'There is no ticket on your given date!', it means that there is no available ticket on that date, please change the date.\\
+                \noindent In case this ticket is available in the system, there is an alert appeared: 'This ticket is now available for booking. Check your ticket information carefully and then choose one payment method to book this ticket.' Here is a example when the ticket is available:
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.6]{graphics/GUI/student/std_availableticket.png}
+                        \caption{Student - Ticket is available}
+                    \label{fig:std_ticketavailable}
+                    \end{figure}
+                \noindent At the next step, users can purchase the ticket by Momo payment method that our system offers by clicking the 'Pay with Momo ATM'. The page would redirect to another page as follow:
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.5]{graphics/GUI/student/std_momopayment.png}
+                        \caption{Student - Momo payment}
+                    \label{fig:std_momopayment}
+                    \end{figure}
+                \noindent Now, users just need to enter their card information and click 'Thanh toán' (Pay)
+                
+            \subsubsection{Notifications}
+            \noindent Another function of our system is displaying all notifications from administrators by clicking 'Notifications' section in the sidebar menu:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{graphics/GUI/student/std_notifications.png}
+                    \caption{Student - Notifications}
+                \label{fig:std_noti}
+                \end{figure}
+          \subsubsection{Logout}      
+            \noindent Users can logout the system by clicking the 'Logout' section in the sidebar menu or clicking 'My profile' $\rightarrow$ 'Logout' as follow:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{graphics/GUI/student/std_logout.png}
+                    \caption{Student - Logout}
+                \label{fig:std_logout}
+                \end{figure}
+        \newpage
+
+\subsection{Admin as a user}
+    \subsubsection{Login}
+    \\ \noindent \textbf{Sample account:} 
+    \\ User ID: admin10
+    \\ Password: 123456789
+    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/GUI/admin/ad_login.png}
+            \caption{Admin - Login Screen}
+        \label{fig:ad_loginscreen}
+        \end{figure}
+\noindent After 'admin as a user' successfully logins, users can see a main page as follow:
+    \subsubsection{Main page}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.4]{graphics/GUI/admin/ad_mainpage.png}
+            \caption{Admin - Main page}
+        \label{fig:ad_mainpage}
+        \end{figure}
+    
+    
+    \noindent Functions that 'admin as a user' can experience in our system:
+        \subsubsection{Account Information}
+                \noindent Users can check their account information by clicking 'Account' section $\rightarrow$ 'Account information' tab:
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{graphics/GUI/admin/ad_accountinfo.png}
+                        \caption{Admin - Account Information}
+                    \label{fig:ad_accountinfo}
+                    \end{figure}
+                
+        \subsubsection{Change password}
+        \noindent Similarly to student users, admin users can change password in our system by clicking 'Account' section $\rightarrow$ 'Change password' tab, then follow the password rules to change new password.
+            
+        \subsubsection{View bus list and ticket list}  
+        \noindent Admin users also have 'view bus data list' or 'view bus ticket list' functions. Users can access theses functions by clicking 'Data list' section $\rightarrow$ 'Bus' or 'Data list' section $\rightarrow$ 'Ticket' to manage and control the system. Here are examples for these two functions:
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.23]{graphics/GUI/admin/ad_bus_ticketdata.png}
+                    \caption{Admin - View bus list and ticket list}
+                \label{fig:ad_busticketlist}
+                \end{figure}
+                
+        \subsubsection{Modification}
+        \noindent Our system offers a modification function for admin users to add a ticket for a new bus schedule, change ticket price and send notifications to students. Users can approach these function by clicking 'Modification' section in the sidebar menu.
+            
+            \paragraph{Add a ticket:}
+                \noindent Users can add a ticket by entering date, route and price for a new ticket, then clicking 'Add this ticket' button to complete.
+                        \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.45]{graphics/GUI/admin/ad_addaticket.png}
+                        \caption{Admin - Add a ticket}
+                        \label{fig:ad_addaticket}
+                        \end{figure}
+                        
+            \paragraph{Change ticket price:}        
+                \noindent Admin users can change ticket price by selecting available date, route and entering a new price.
+                        \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.6]{graphics/GUI/admin/ad_changeticketprice.png}
+                        \caption{Admin - Change ticket price}
+                        \label{fig:ad_changeticketprice}
+                        \end{figure}
+                        
+            \paragraph{Send notification:}
+                 \noindent Admin users also can send notifications via this system by selecting a available date, typing a title and content, then clicking 'Send' button to complete.
+                        \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{graphics/GUI/admin/ad_sendnoti.png}
+                        \caption{Admin - Send notification}
+                        \label{fig:ad_sendnoti}
+                        \end{figure}
+
+        \subsubsection{Notification} 
+            \noindent Admin users also can view all notifications they announced before.
+                \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{graphics/GUI/admin/ad_notification.png}
+                        \caption{Admin - Send notification}
+                        \label{fig:ad_sendnoti}
+                        \end{figure}
+                        
+        \subsubsection{Logout} 
+            \noindent Similarly to student users, admin users can logout the system by clicking the 'Logout' section in the sidebar menu or clicking 'My profile' $\rightarrow$ 'Logout'.
+        \newpage
+        
+\subsection{Driver as a user}
+    \subsubsection{Login}
+\noindent \textbf{Sample account:} 
+\\ User ID: driver20
+\\ Password: 123456789
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/GUI/driver/driver_login.png}
+            \caption{Driver - Login Screen}
+        \label{fig:driver_loginscreen}
+        \end{figure}
+\noindent After 'driver as a user' successfully logins, users can see a main page as follow:
+    \subsubsection{Main page}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.4]{graphics/GUI/driver/driver_mainpage.png}
+            \caption{Driver - Main page}
+        \label{fig:driver_mainpage}
+        \end{figure}  
+        
+        
+        \subsubsection{Account Information}
+                \noindent Users can check their account information by clicking 'Account' section $\rightarrow$ 'Account information' tab:
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{graphics/GUI/driver/driver_accountinfo.png}
+                        \caption{Driver - Account Information}
+                    \label{fig:driver_accountinfo}
+                    \end{figure}
+                
+        \subsubsection{Change password}
+                \noindent Similarly to student users, driver users can change password in our system by clicking 'Account' section $\rightarrow$ 'Change password' tab, then follow the password rules to change new password.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{graphics/GUI/driver/driver_changepassword.png}
+                        \caption{Driver - Change password}
+                    \label{fig:driver_changepassword}
+                    \end{figure}
+                    
+        \subsubsection{Scan QR ticket}
+                \noindent Our system offers a function for driver users to check if students' bus tickets are valid or not. Users can access by clicking 'Scan tickets' section. Then users just need to scan QR code provided by student.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{graphics/GUI/driver/driver_scantickets.png}
+                        \caption{Driver - Scan tickets}
+                    \label{fig:driver_scantickets}
+                    \end{figure}
+                \noindent If there is an alert 'Invalid ticket! This QR Code is not valid.', it means that the bus ticket provided by the student is not valid.
+                    \begin{figure}[H]
+                            \centering
+                            \includegraphics[scale=0.8]{graphics/GUI/driver/driver_invalidticket.png}
+                            \caption{Driver - Invalid QR ticket}
+                        \label{fig:driver_invalidticket}
+                    \end{figure}
+                    
+                \noindent If the alert is 'Valid ticket!', it means that the ticket of student is valid. Users can see an information of the purchased ticket below the alert.
+                    \begin{figure}[H]
+                            \centering
+                            \includegraphics[scale=0.8]{graphics/GUI/driver/driver_validticket.png}
+                            \caption{Driver - Valid QR ticket}
+                        \label{fig:driver_validticket}
+                    \end{figure}
+
+         \subsubsection{Notification}
+                \noindent Driver users can view notifications from administrators by clicking 'Notifications' section in the sidebar menu:
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{graphics/GUI/driver/driver_notification.png}
+                        \caption{Driver - Notification}
+                    \label{fig:driver_noti}
+                    \end{figure}
+
+        \subsubsection{Logout} 
+            \noindent Similarly to student users, admin users can logout the system by clicking the 'Logout' section in the sidebar menu or clicking 'My profile' $\rightarrow$ 'Logout'.
+        
+
+\subsection{Responsive design approach}
+\noindent Our system specially offers a responsive method to optimize a flexible size for a user's screen. This function can reach users across multiple devices (i.e. computers, tablets and smartphones) and ensure a seamless user experience.\\
+\noindent In terms of development, applying responsive approach takes less time than creating an additional stand-alone mobile site, which has been the traditional approach. By virtue of, testing across a number of websites also increases development, support and maintenance overhead.\\
+\noindent In terms of management, it is much easier and less time consuming to manage and maintain a single site,  with much less content to manage. Additionally a single administrative interface can easily be optimised, the overall multi-device experience can be significantly enhanced within a single administration.\\
+\noindent Below is a typical illustration of the responsive approach for 3 common types of portable devices:\\
+\newpage
+    \textbf{Student users with laptops:}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{graphics/GUI/responsive/Lap_std.jpg}
+            \caption{Students - Responsive approach in Laptop}
+            \label{fig:driver_noti}
+        \end{figure}
+\newpage        
+    \textbf{Admin users with tablet (iPad Pro):}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.25]{graphics/GUI/responsive/IpadPro_admin.jpg}
+            \caption{Admins - Responsive approach in iPad Pro}
+            \label{fig:admin_ipadpro}
+        \end{figure}
+\newpage        
+    \textbf{Driver users with smartphone (Samsung Galaxy S20 Ultra):}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.2]{graphics/GUI/responsive/SSS20Ultra_driver.jpg}
+            \caption{Drivers - Responsive approach in Samsung Galaxy S20 Ultra}
+            \label{fig:driver_sss20ultra}
+        \end{figure}
+        
+\noindent Hence, whether the content is viewed on a laptop, tablet or phone, the responsive method allows for automatic screen adjustment.
+    \newpage
