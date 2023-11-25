@@ -113,10 +113,3 @@ ggplot(df, aes(x = Factor)) +
   facet_wrap(~ Cluster) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(title = "Factor Distribution in Each Cluster", x = "Factor", y = "Count")
-
-# Create a histogram of the Platform distribution in each cluster
-ggplot(df, aes(x = Platform)) +
-  geom_histogram(stat = "count", fill = "violet", color = "black", linewidth = 0.8) +
-  facet_wrap(~ Cluster) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  labs(title = "Platform Distribution in Each Cluster", x = "Platform", y = "Count")
